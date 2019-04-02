@@ -9,7 +9,16 @@ server {
     sendfile off;
 
     location / {
-        try_files $uri $uri/ =404;
+        try_files $uri @opencart;
+    }
+
+    location @opencart {
+        rewrite ^/api/v1(.*)$ /index.php?route=api/v1&$1 last;
+        rewrite ^/(.+)$ /index.php?_route_=$1 last;
+    }
+
+    location /admin {
+        return 301 http://$host/admin/index.php;
     }
 
     location ~* \.php {

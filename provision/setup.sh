@@ -1,5 +1,5 @@
-MYSQL_PASS=1234
-MYSQL_DB=lorem
+MYSQL_PASS=root
+MYSQL_DB=caxap_test
 
 #!/bin/bash
 apt-get update
@@ -34,7 +34,7 @@ service mysql restart
 service nginx restart
 
 mysql -u root -p$MYSQL_PASS -e "create database $MYSQL_DB;"
-mysql -u root -p$MYSQL_PASS $MYSQL_DB < /var/www/src/schema.sql
+mysql -u root -p$MYSQL_PASS $MYSQL_DB < /var/www/src/caxap_test.mysql
 
 cd /tmp
 curl -sS https://getcomposer.org/installer | php
