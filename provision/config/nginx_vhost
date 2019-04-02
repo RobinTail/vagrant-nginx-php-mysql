@@ -17,10 +17,6 @@ server {
         rewrite ^/(.+)$ /index.php?_route_=$1 last;
     }
 
-    location /admin {
-        return 301 http://$host/admin/index.php;
-    }
-
     location ~* \.php {
 
         include fastcgi_params;
