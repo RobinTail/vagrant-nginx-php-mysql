@@ -40,5 +40,5 @@ cd /tmp
 curl -sS https://getcomposer.org/installer | php
 mv /tmp/composer.phar /usr/local/bin/composer
 
-cd /var/www/src
-composer install
+# cd /var/www/src
+# composer install
