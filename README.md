@@ -7,7 +7,7 @@
 
 1. Clone this repo to anywhere on your machine
 
-        git clone git@github.com:martonbognar/vagrant-nginx-php-mysql.git
+        git clone https://github.com/RobinTail/vagrant-nginx-php-mysql.git
 3. Clone your repo *inside* this one and rename it to `src`, or start building your site inside a newly created `src` folder
 
         git clone your-git-url-here.git src
